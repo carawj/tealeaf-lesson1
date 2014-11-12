@@ -56,8 +56,8 @@ while keep_playing == 'y'
   player_num = gets.chomp
 
   while !['r', 's', 'p'].include?(player_num)
-  puts "I'm afraid #{player_num} isn't a valid choice. Please enter R for rock, P for paper or S for scissors:"
-  player_num = gets.chomp
+    puts "I'm afraid #{player_num} isn't a valid choice. Please enter R for rock, P for paper or S for scissors:"
+    player_num = gets.chomp
   end
 
   computer_num = rand(1..3)
