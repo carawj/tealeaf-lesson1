@@ -11,7 +11,7 @@ num2 = gets.chomp
 say "What would you like to do? Enter: 1 to add, 2 to subtract, 3 to multiply, or 4 to divide."
 operation = gets.chomp
 
-while operation.to_i < 1 || operation.to_i > 4
+while ![1, 2, 3, 4].include?(operation.to_i)
   say "Please try again. Enter: 1 to add, 2 to subtract, 3 to multiply, or 4 to divide."
   operation = gets.chomp
 end
