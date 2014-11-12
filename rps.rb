@@ -2,15 +2,6 @@
 keep_playing = 'y'
 
 # here are the methods
-def computer_pick(computer_num) #to convert the computer's random number to a word
-  if computer_num == 1
-      computer_choice = 'rock'
-  elsif computer_num == 2
-    computer_choice = 'paper'
-  else
-    computer_choice = 'scissors'
-  end
-end
 
 def player_pick(player_num) #to convert the player's letter choice to a word
   if player_num == 'r'
@@ -60,8 +51,7 @@ while keep_playing == 'y'
     player_num = gets.chomp
   end
 
-  computer_num = rand(1..3)
-  computer_choice = computer_pick(computer_num)
+  computer_choice = ['rock', 'paper', 'scissors'].sample
   player_choice = player_pick(player_num)
 
   puts "You picked #{player_choice} and the computer picked #{computer_choice}."
