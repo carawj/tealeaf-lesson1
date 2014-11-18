@@ -19,7 +19,7 @@ def calculate_total(cards)
     end
   end
 
-  numbers.each do |ace_value|
+  numbers_only.each do |ace_value|
     if ace_value == 'Ace'
       if total <= 10
         total += 11
@@ -62,8 +62,7 @@ while play_again.downcase == 'y'
 
   puts "#{player_name}, your cards are #{player_cards[0][1].to_s} of #{player_cards[0][0].to_s} and #{player_cards[1][1].to_s} of #{player_cards[1][0].to_s}."
   say "Your total is #{player_total}."
-  puts "The dealer's cards are #{computer_cards[0][1].to_s} of #{computer_cards[0][0].to_s} and #{computer_cards[1][1].to_s} of #{computer_cards[1][0].to_s}."
-  say "Their total is #{computer_total}."
+  say "The dealer's face-up card is #{computer_cards[0][1].to_s} of #{computer_cards[0][0].to_s}."
 
   while player_choice == '1' && player_total <= 20
     puts "Would you like to hit or stay? (Please put 1 to hit or 2 to stay.)"
