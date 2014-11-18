@@ -8,6 +8,7 @@ end
 def calculate_total(cards)
   numbers_only = cards.map { |second| second[1] }
   total = 0
+
   numbers_only.each do |value|
     if value == 'Ace'
         total += 0
@@ -28,9 +29,6 @@ def calculate_total(cards)
     end
   end
   total
-end
-
-def calculate_decks(number_of_decks)
 end
 
 puts "What's your name?"
